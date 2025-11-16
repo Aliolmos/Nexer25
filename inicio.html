@@ -27,6 +27,9 @@
                     <a href="#contacto">Descargar</a>
                 </nav>
                 
+                <button class="mobile-menu-btn">
+                    <i class="fas fa-bars"></i>
+                </button>
             </div>
         </div>
     </header>
@@ -71,11 +74,27 @@
         </div>
     </section>
 
-    <!-- Sección Quienes Somos -->
+    <!-- Sección Quienes Somos - Versión móvil mejorada -->
     <section id="quienes">
         <div class="container">
             <h2 class="section-title">Simple, Rápida y Efectiva</h2>
             <div class="content">
+                <div class="text-content oculto">
+                    <p>
+                        Con <strong style="color: var(--primary);">Nexer</strong> puedes optimizar y personalizar tu entrenamiento 
+                        en el gimnasio. Su Inteligencia Artificial aprende de ti 
+                        en tiempo real para recomendarte peso y repeticiones, y 
+                        para ajustar tu rutina de forma instantánea.
+                    </p>
+                    <p>
+                        Es tu coach en el bolsillo, guiándote de manera inteligente y adaptativa 
+                        para maximizar tus resultados y hacer cada sesión más efectiva.
+                    </p>
+                    <p>
+                        Combinamos lo mejor de la tecnología con el conocimiento de entrenadores 
+                        profesionales para ofrecerte una experiencia de entrenamiento única.
+                    </p>
+                </div>
                 <div class="image-content">
                     <img src="imagenes/celular foto 2.png" alt="Captura de la app" class="oculto phone-mockup">
                     <div class="stats-container">
@@ -98,22 +117,6 @@
                             <p class="stat-text">IA integrada</p>
                         </div>
                     </div>
-                </div>
-                <div class="text-content oculto">
-                    <p>
-                        Con <strong style="color: var(--primary);">Nexer</strong> puedes optimizar y personalizar tu entrenamiento 
-                        en el gimnasio. Su Inteligencia Artificial aprende de ti 
-                        en tiempo real para recomendarte peso y repeticiones, y 
-                        para ajustar tu rutina de forma instantánea.
-                    </p>
-                    <p>
-                        Es tu coach en el bolsillo, guiándote de manera inteligente y adaptativa 
-                        para maximizar tus resultados y hacer cada sesión más efectiva.
-                    </p>
-                    <p>
-                        Combinamos lo mejor de la tecnología con el conocimiento de entrenadores 
-                        profesionales para ofrecerte una experiencia de entrenamiento única.
-                    </p>
                 </div>
             </div>
         </div>
@@ -276,25 +279,99 @@
 
         elementosOcultos.forEach((el) => observer.observe(el));
 
-        // Menú móvil
-        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
-        const navLinksContainer = document.querySelector('.nav-links');
+        // Menú hamburguesa - VERSIÓN CORREGIDA
+const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+const navLinksContainer = document.querySelector('.nav-links');
+const body = document.body;
 
-        mobileMenuBtn.addEventListener('click', () => {
-            navLinksContainer.classList.toggle('active');
-            mobileMenuBtn.innerHTML = navLinksContainer.classList.contains('active') ? 
-                '<i class="fas fa-times"></i>' : '<i class="fas fa-bars"></i>';
-        });
+// Crear overlay dinámicamente
+const navOverlay = document.createElement('div');
+navOverlay.className = 'nav-overlay';
+document.body.appendChild(navOverlay);
 
-        // Cerrar menú al hacer clic en un enlace (en móviles)
-        navLinks.forEach(link => {
-            link.addEventListener('click', () => {
-                if (window.innerWidth <= 768) {
-                    navLinksContainer.classList.remove('active');
-                    mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
-                }
-            });
-        });
+// Función para abrir/cerrar menú
+function toggleMobileMenu() {
+    const isActive = navLinksContainer.classList.contains('active');
+    
+    if (!isActive) {
+        // Abrir menú
+        navLinksContainer.classList.add('active');
+        navOverlay.classList.add('active');
+        mobileMenuBtn.innerHTML = '<i class="fas fa-times"></i>';
+        body.style.overflow = 'hidden';
+    } else {
+        // Cerrar menú
+        navLinksContainer.classList.remove('active');
+        navOverlay.classList.remove('active');
+        mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
+        body.style.overflow = '';
+    }
+}
+
+// Event listener para el botón hamburguesa
+mobileMenuBtn.addEventListener('click', function(e) {
+    e.stopPropagation();
+    toggleMobileMenu();
+});
+
+// Cerrar menú al hacer clic en overlay
+navOverlay.addEventListener('click', function() {
+    toggleMobileMenu();
+});
+
+// Cerrar menú al hacer clic en un enlace del menú
+navLinksContainer.addEventListener('click', function(e) {
+    if (e.target.tagName === 'A') {
+        toggleMobileMenu();
+    }
+});
+
+// Cerrar menú al redimensionar a desktop
+window.addEventListener('resize', function() {
+    if (window.innerWidth > 768) {
+        navLinksContainer.classList.remove('active');
+        navOverlay.classList.remove('active');
+        body.style.overflow = '';
+        mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
+    }
+});
+
+// Navegación activa (código existente)
+const sections2 = document.querySelectorAll("header, section");
+const navLinks2 = document.querySelectorAll("nav a");
+
+window.addEventListener("scroll", () => {
+    let current = "";
+
+    sections2.forEach(section => {
+        const sectionTop = section.offsetTop - 100;
+        if (pageYOffset >= sectionTop) {
+            current = section.getAttribute("id");
+        }
+    });
+
+    navLinks2.forEach(link => {
+        link.classList.remove("active");
+        if (link.getAttribute("href") === "#" + current) {
+            link.classList.add("active");
+        }
+    });
+});
+
+// Animaciones al hacer scroll (código existente)
+const elementosOcultos2 = document.querySelectorAll('.oculto, .oculto-fade');
+
+const observer2 = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('mostrar');
+        }
+    });
+}, {
+    threshold: 0.1
+});
+
+elementosOcultos2.forEach((el) => observer2.observe(el));
     </script>
 </body>
 </html>
