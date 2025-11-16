@@ -184,7 +184,7 @@ header {
     font-weight: 600;
     transition: var(--transition);
     position: relative;
-    padding: 8px 0;
+    padding: px 0;
 }
 
 .nav-links a:after {
