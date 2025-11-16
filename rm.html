@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Repetición Máxima - Nexer</title>
+    <style>
+        /* Fuentes */
+        @font-face {
+            font-family: 'NexerFont'; /* Reemplaza esto con el nombre de tu fuente */
+            src: url('fonts/tu-fuente.woff2') format('woff2'); /* Ajusta la ruta y el nombre del archivo */
+        }
+        body {
+            font-family: 'NexerFont', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background: #338096; /* Color de fondo suave para que se vea mejor */
+            color: #333;
+        }
+
+        /* Contenedor principal */
+        .container {
+            max-width: 800px;
+            margin: 40px auto; /* Aumentamos el margen superior e inferior */
+            padding: 40px; /* Aumentamos el padding para más espacio interior */
+            background: #fff;
+            border-radius: 12px; /* Esquinas más redondeadas */
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); /* Sombra más suave y pronunciada */
+            animation: fadeIn 1.5s ease-out forwards;
+        }
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Botón de volver */
+        .back-button {
+            display: inline-block;
+            margin-bottom: 25px; /* Más espacio */
+            padding: 12px 20px;
+            background: #338096;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 30px; /* Botón más redondeado */
+            font-weight: bold;
+            transition: transform 0.3s ease;
+        }
+        .back-button:hover {
+            transform: scale(1.05); /* Efecto de escala al pasar el ratón */
+            background: #256a7c;
+        }
+
+        /* Títulos */
+        h1 {
+            text-align: center;
+            color: #2c3e50; /* Un color más oscuro para mayor contraste */
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+        h2 {
+            color: #338096; /* Color de la marca */
+            font-size: 1.8rem;
+            margin-top: 40px;
+            border-bottom: 2px solid #b2dfdb; /* Línea decorativa para los subtítulos */
+            padding-bottom: 5px;
+        }
+
+        /* Listas */
+        ul {
+            list-style: none; /* Elimina los puntos predeterminados */
+            padding: 0;
+        }
+        li {
+            background: #eef5f9; /* Un color de fondo suave para cada ítem */
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 15px;
+            border-left: 4px solid #338096; /* Barra lateral para un toque de color */
+        }
+        li strong {
+            color: #444;
+        }
+
+        /* Contenedor de la imagen */
+        .image-container {
+            text-align: center;
+            margin: 30px 0;
+        }
+        .image-container img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Párrafos */
+        p {
+            font-size: 1rem;
+            color: #555;
+            text-align: justify; /* Alineación justificada para una mejor lectura */
+        }
+
+        /* Resaltado de Nexer */
+        strong {
+            color: #338096;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <a href="inicio.html" class="back-button">← Volver a inicio</a>
+
+        <div class="image-container">
+            <img src="imagenes/rm-removebg-preview.png" alt="Icono de repetición máxima">
+        </div>
+
+        <h1>¿Qué es la Repetición Máxima (RM)?</h1>
+        
+        <p>
+            En el mundo del entrenamiento con pesas, la <strong>Repetición Máxima (RM)</strong> es la cantidad de peso más alta que una persona puede levantar en un ejercicio específico para realizar una única repetición completa con la técnica adecuada. Es una medida clave para evaluar la fuerza muscular.
+        </p>
+
+        <h2>Cómo se utiliza el 1RM</h2>
+        <p>
+            El valor de 1RM (la repetición máxima para un solo levantamiento) se utiliza a menudo como punto de referencia para:
+        </p>
+        <ul>
+            <li>
+                <strong>Evaluar el progreso:</strong> Comparar tu 1RM a lo largo del tiempo te ayuda a medir tus ganancias de fuerza.
+            </li>
+            <li>
+                <strong>Planificar el entrenamiento:</strong> El 1RM es la base para calcular el peso que debes usar en tus series de entrenamiento. Por ejemplo, si tu objetivo es la hipertrofia (crecimiento muscular), entrenarás con un porcentaje de tu 1RM (generalmente entre el 70% y 85%).
+            </li>
+            <li>
+                <strong>Establecer metas:</strong> Conocer tu 1RM te permite establecer objetivos de fuerza realistas y alcanzables.
+            </li>
+        </ul>
+
+        <h2>Consideraciones de Seguridad</h2>
+        <p>
+            Calcular tu 1RM puede ser riesgoso, ya que implica levantar un peso muy pesado. Es importante que lo hagas con un compañero que te asista o un entrenador experimentado. Si eres principiante, es recomendable usar métodos indirectos para estimar tu 1RM en lugar de probarlo directamente.
+        </p>
+
+        <p>
+            <strong>Nexer</strong> te ayuda a registrar y calcular tu 1RM de forma segura y precisa, para que puedas llevar tu entrenamiento al siguiente nivel.
+        </p>
+
+    </div>
+
+</body>
+</html>

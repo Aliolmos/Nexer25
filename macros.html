@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Macronutrientes - Nexer</title>
+    <style>
+        /* Fuentes */
+        @font-face {
+            font-family: 'NexerFont'; /* Reemplaza esto con el nombre de tu fuente */
+            src: url('fonts/tu-fuente.woff2') format('woff2'); /* Ajusta la ruta y el nombre del archivo */
+        }
+        body {
+            font-family: 'NexerFont', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background: #338096; /* Color de fondo suave para que se vea mejor */
+            color: #000000;
+        }
+
+        /* Contenedor principal */
+        .container {
+            max-width: 800px;
+            margin: 40px auto; /* Aumentamos el margen superior e inferior */
+            padding: 40px; /* Aumentamos el padding para más espacio interior */
+            background: #fff;
+            border-radius: 12px; /* Esquinas más redondeadas */
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); /* Sombra más suave y pronunciada */
+            animation: fadeIn 1.5s ease-out forwards;
+        }
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Botón de volver */
+        .back-button {
+            display: inline-block;
+            margin-bottom: 25px; /* Más espacio */
+            padding: 12px 20px;
+            background: #338096;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 30px; /* Botón más redondeado */
+            font-weight: bold;
+            transition: transform 0.3s ease;
+        }
+        .back-button:hover {
+            transform: scale(1.05); /* Efecto de escala al pasar el ratón */
+            background: #256a7c;
+        }
+
+        /* Títulos */
+        h1 {
+            text-align: center;
+            color: #2c3e50; /* Un color más oscuro para mayor contraste */
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+        h2 {
+            color: #338096; /* Color de la marca */
+            font-size: 1.8rem;
+            margin-top: 40px;
+            border-bottom: 2px solid #b2dfdb; /* Línea decorativa para los subtítulos */
+            padding-bottom: 5px;
+        }
+
+        /* Listas */
+        ul {
+            list-style: none; /* Elimina los puntos predeterminados */
+            padding: 0;
+        }
+        li {
+            background: #eef5f9; /* Un color de fondo suave para cada ítem */
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 15px;
+            border-left: 4px solid #338096; /* Barra lateral para un toque de color */
+        }
+        li strong {
+            color: #000000;
+        }
+
+        /* Contenedor de la imagen */
+        .image-container {
+            text-align: center;
+            margin: 30px 0;
+        }
+        .image-container img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 12px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Párrafos */
+        p {
+            font-size: 1rem;
+            color: #555;
+            text-align: justify; /* Alineación justificada para una mejor lectura */
+        }
+
+        /* Resaltado de Nexer */
+        strong {
+            color: #338096;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <a href="inicio.html" class="back-button">← Volver a inicio</a>
+
+        <div class="image-container">
+            <img src="imagenes/macros.png" alt="Icono de macronutrientes">
+        </div>
+
+        <h1>¿Qué son los Macronutrientes?</h1>
+        
+        <p>
+            En nutrición, los macronutrientes son los componentes principales de nuestra dieta que el cuerpo necesita en grandes cantidades para obtener energía, crecer y mantener sus funciones vitales. A diferencia de los micronutrientes (como las vitaminas y minerales), los macronutrientes son la fuente de la mayoría de las calorías.
+        </p>
+
+        <h2>Tipos de Macronutrientes</h2>
+        <p>Existen tres tipos principales de macronutrientes, cada uno con un rol esencial en el organismo:</p>
+        <ul>
+            <li>
+                <strong>Carbohidratos:</strong> Son la principal fuente de energía para el cuerpo. Se encuentran en alimentos como granos, frutas, verduras, y legumbres. Se dividen en azúcares, almidones y fibra.
+            </li>
+            <li>
+                <strong>Proteínas:</strong> Son fundamentales para la construcción y reparación de tejidos, la producción de enzimas y hormonas. Se obtienen de carnes, pescados, huevos, lácteos y leguminosas.
+            </li>
+            <li>
+                <strong>Grasas:</strong> Son una fuente concentrada de energía y son vitales para la absorción de vitaminas, la protección de órganos y la función celular. Las grasas saludables se encuentran en el aguacate, frutos secos, semillas y aceites vegetales.
+            </li>
+        </ul>
+
+        <h2>¿Por qué son importantes?</h2>
+        <p>
+            Mantener un equilibrio adecuado de macronutrientes es clave para una salud óptima, el rendimiento físico y el control del peso. Cada persona tiene necesidades diferentes, dependiendo de su nivel de actividad, edad y objetivos.
+        </p>
+
+        <p>
+            <strong>Nexer</strong> te ayuda a registrar y entender tus macros para que puedas alcanzar tus metas de forma inteligente y efectiva.
+        </p>
+
+    </div>
+
+</body>
+</html>
