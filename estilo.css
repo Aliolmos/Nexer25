@@ -676,10 +676,16 @@ footer {
     min-width: 280px;
 }
 
+
 .footer-section h2 {
     font-size: 1.5rem;
     margin-bottom: 1.8rem;
     color: rgb(253, 253, 253);
+}
+
+.footer-section p {
+  color: white;
+  margin-bottom: 1rem;
 }
 
 .social-links {
